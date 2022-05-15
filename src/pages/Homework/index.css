@@ -1,0 +1,5 @@
+@media screen and (max-width: 600px) {
+  .ant-pro-steps-form-container {
+    min-width: 280px;
+  }
+}

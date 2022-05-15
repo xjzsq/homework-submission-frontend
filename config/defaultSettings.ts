@@ -1,0 +1,21 @@
+import { Settings as LayoutSettings } from '@ant-design/pro-layout';
+
+const Settings: LayoutSettings & {
+  pwa?: boolean;
+  logo?: string;
+} = {
+  navTheme: 'light', // realDark
+  // 拂晓蓝 #1890ff
+  primaryColor: '#00bfff',
+  layout: 'top',
+  contentWidth: 'Fixed',
+  fixedHeader: true,
+  fixSiderbar: true,
+  colorWeak: false,
+  title: "作业提交系统",
+  pwa: false,
+  logo: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNjMyOTI4NTYxMTc2IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9Ijg3NDgiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48L3N0eWxlPjwvZGVmcz48cGF0aCBkPSJNOTY2LjY1NiA1NC41MjhjMTEuMDA4IDcuODUwNjY3IDE2LjIxMzMzMyAyMC40OCAxNC4xNjUzMzMgMzMuNTM2TDg0Ni42NzczMzMgODkyLjU4NjY2N2EzMy42MjEzMzMgMzMuNjIxMzMzIDAgMCAxLTMyLjkzODY2NiAyNy44MTg2NjYgMzYuMDEwNjY3IDM2LjAxMDY2NyAwIDAgMS0xMi42MjkzMzQtMi42NDUzMzNsLTIzNy4yMjY2NjYtOTYuOTM4NjY3LTEyNi44MDUzMzQgMTU0LjUzODY2N2EzMi41MTIgMzIuNTEyIDAgMCAxLTI1LjYgMTIuMDMyIDMzLjQ1MDY2NyAzMy40NTA2NjcgMCAwIDEtMzMuNTM2LTMzLjUzNlY3NzEuMTU3MzMzbDQ1Mi41MjI2NjctNTU0LjY2NjY2NkwyNzAuNTA2NjY3IDcwMC45MjggNjMuNjU4NjY3IDYxNi4wMjEzMzNhMzMuMTk0NjY3IDMzLjE5NDY2NyAwIDAgMS00LjI2NjY2Ny01OS43MzMzMzNMOTMxLjA3MiA1My41ODkzMzNhMzMuNDUwNjY3IDMzLjQ1MDY2NyAwIDAgMSAzNS41ODQgMS4wMjR6IiBmaWxsPSIjMDBiZmZmIiBwLWlkPSI4NzQ5Ij48L3BhdGg+PC9zdmc+',
+  iconfontUrl: '',
+};
+
+export default Settings;
