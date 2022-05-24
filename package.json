@@ -1,8 +1,8 @@
 {
-  "name": "ant-design-pro",
-  "version": "5.0.0",
+  "name": "homework-submission-web",
+  "version": "1.0.0",
   "private": true,
-  "description": "An out-of-box UI solution for enterprise applications",
+  "description": "作业提交系统-后台前端",
   "scripts": {
     "analyze": "cross-env ANALYZE=1 umi build",
     "build": "umi build",

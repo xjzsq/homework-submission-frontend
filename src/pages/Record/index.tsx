@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useIntl, FormattedMessage, useRequest } from 'umi';
-import { message, Space } from 'antd';
+import { message, Space } from 'antd'; // Spin
 import { PageContainer } from '@ant-design/pro-layout';
 import ProTable from '@ant-design/pro-table';
 import moment from 'moment';
@@ -15,10 +15,10 @@ interface IDownloadDrawerRef {
 
 const RecordList: React.FC<Record<string, any>> = (prop) => {
   const intl = useIntl();
-  const actionRef = useRef();
+  const actionRef = useRef<any>();
   const downloadDrawerRef = useRef<IDownloadDrawerRef>();
   const [columns, setColumns] = useState<ProColumns<any>[]>([]);
-  const { loading: loadingColumns, data: dataColumn } = useRequest(
+  const { data: dataColumn } = useRequest(
     () => {
       return prop.location.query.no ? queryHomework({ key: prop.location.query.no }) : false;
     },
@@ -95,6 +95,7 @@ const RecordList: React.FC<Record<string, any>> = (prop) => {
           },
         });
         setColumns(_columns);
+        setTimeout(actionRef.current?.reload.bind(actionRef.current), 0);
       },
     },
   );
@@ -108,10 +109,8 @@ const RecordList: React.FC<Record<string, any>> = (prop) => {
           intl.formatMessage({
             id: 'pages.record.title',
             defaultMessage: '提交记录',
-          }) +
-          '（若列表为空，请点击查询按钮）'
+          })
         }
-        loading={loadingColumns}
         rowSelection={{}}
         tableAlertOptionRender={({ selectedRowKeys, selectedRows, onCleanSelected }) => {
           return (
@@ -244,6 +243,7 @@ const RecordList: React.FC<Record<string, any>> = (prop) => {
           }
           return _res;
         }}
+        manualRequest={true}
         pagination={{
           defaultPageSize: 20,
           showSizeChanger: true,

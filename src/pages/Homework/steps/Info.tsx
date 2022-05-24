@@ -16,13 +16,13 @@ const StepInfo: React.FC<Iprops> = (props: Iprops) => {
     <ProFormList
       name="info"
       label="信息收集内容"
-      actionRender={(prop, action, defaultActionDom) => {
+      actionRender={(prop, action) => {
         return [
           <Button
             danger
             key={prop.key}
             onClick={() => {
-              action.remove((defaultActionDom[0] as { _owner: { index: number } })._owner.index);
+              action.remove(prop.key);
               props.update();
             }}
           >
